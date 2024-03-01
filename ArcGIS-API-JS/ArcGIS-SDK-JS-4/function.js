@@ -8,7 +8,8 @@ require([
   "esri/widgets/LayerList",
   "esri/widgets/Sketch"
 
-], (Map, MapView, FeatureLayer, Color, Query,GraphicsLayer,Legend, Sketch) => {
+], (Map, MapView, FeatureLayer, Color, Query,GraphicsLayer,LayerList, Sketch) => {
+
   const mapa = new Map({
     basemap: "gray-vector",
   });
@@ -106,7 +107,7 @@ require([
       capaGraficaPlayas.addMany(features)
     })
 
-  let leyendaWidget = new Legend({
+  let layerListWidget = new LayerList({
     view:vista
   })
 
@@ -149,7 +150,7 @@ require([
 
   mapa.addMany([redNaturaFL, playasFL,capaGraficaPlayas,capaGraficaSketch,capaGraficaResultados]);
 
-  vista.ui.add(leyendaWidget,{
+  vista.ui.add(layerListWidget,{
     position:'bottom-left'
   })
   vista.ui.add(sketchWidget,{
