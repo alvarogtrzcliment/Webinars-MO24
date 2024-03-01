@@ -2,6 +2,7 @@ const descripcion = document.getElementById("descripcionZaragoza");
 const bottonVerMasMenos = document.getElementById('verMasMenos')
 
 function verMasHandler() {
+  
   console.log(descripcion.childElementCount)
 
   if (descripcion.childElementCount === 2) {
@@ -21,3 +22,5 @@ function verMasHandler() {
 
   }
 }
+
+
